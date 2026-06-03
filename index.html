@@ -4,115 +4,163 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cinematic Portfolio</title>
+<title>Unnar Darri Magnússon | Filmmaker</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="styles.css">
 
-<!-- GSAP -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-<!-- Lenis -->
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-
 </head>
 
-<body class="bg-black text-white overflow-x-hidden">
-
-<!-- LOADING SCREEN -->
-<div id="loader">
-    <h1>CINEMATIC</h1>
-</div>
-
-<!-- NAV -->
-<nav class="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
-<div class="max-w-7xl mx-auto flex justify-between px-6 py-4">
-    <h1 class="tracking-[0.3em] uppercase text-sm">Your Name</h1>
-    <div class="space-x-6 text-xs uppercase">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-</div>
-</nav>
+<body>
 
 <!-- HERO -->
-<section class="h-screen relative flex items-center justify-center">
+<section class="hero">
 
-<video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
-    <source src="showreel.mp4">
-</video>
+<div class="hero-inner">
 
-<div class="absolute inset-0 bg-black/60"></div>
+<h1 class="title">UNNAR DARRI</h1>
+<h2 class="subtitle">Cinematographer • Filmmaker • Photographer</h2>
 
-<!-- film grain -->
-<div class="grain"></div>
-
-<!-- cinematic bars -->
-<div class="bars"></div>
-
-<div class="relative text-center">
-    <h1 class="text-6xl md:text-8xl font-black tracking-widest">
-        CINEMATIC
-    </h1>
-    <p class="text-gray-300 mt-4">Filmmaker • Editor • Cinematographer</p>
-
-    <a href="#work" class="mt-8 inline-block border px-6 py-3 uppercase text-xs hover:bg-white hover:text-black transition">
-        View Work
-    </a>
 </div>
 
 </section>
 
 <!-- WORK -->
-<section id="work" class="py-32 px-6 max-w-7xl mx-auto">
+<section class="section">
 
-<h2 class="text-4xl mb-16 opacity-70">Selected Work</h2>
+<h2>Selected Work</h2>
 
-<div class="grid md:grid-cols-2 gap-10">
+<div class="grid">
 
-<div class="project">
-    <img src="images/myfilm.jpg">
-    <h3>Short Film</h3>
+<!-- 1 -->
+<div class="card">
+  <h3>Rólegur Gaur</h3>
+  <p>Leikstjórn / Kvikmyndataka</p>
+  <div class="imgs">
+    <img src="images/rolegur-gaur-mynd1.jpg">
+    <img src="images/rolegur-gaur-mynd2.jpg">
+    <img src="images/rolegur-gaur-mynd3.jpg">
+    <img src="images/rolegur-gaur-mynd4.jpg">
+  </div>
 </div>
 
-<div class="project">
-    <img src="images/p2.jpg">
-    <h3>Commercial</h3>
+<!-- 2 -->
+<div class="card">
+  <h3>Djúpt inn í Skóg</h3>
+  <p>Kvikmyndataka / Eftirvinnsla</p>
+  <div class="imgs">
+    <img src="images/Djupt-inn-i-skog-mynd1.jpg">
+    <img src="images/Djupt-inn-i-skog-mynd2.jpg">
+    <img src="images/Djupt-inn-i-skog-mynd3.jpg">
+    <img src="images/Djupt-inn-i-skog-mynd4.jpg">
+  </div>
 </div>
 
-<div class="project">
-    <img src="images/p3.jpg">
-    <h3>Music Video</h3>
+<!-- 3 -->
+<div class="card">
+  <h3>Gesturinn</h3>
+  <p>Kvikmyndataka / Eftirvinnsla</p>
+  <div class="imgs">
+    <img src="images/gesturinn-mynd1.jpg">
+    <img src="images/gesturinn-mynd2.jpg">
+    <img src="images/gesturinn-mynd3.jpg">
+    <img src="images/gesturinn-mynd4.jpg">
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <h3>Raddir sem heyrast ekki</h3>
+  <p>Kvikmyndataka</p>
+  <div class="imgs">
+    <img src="images/raddir-sem-heyrast-ekki-mynd1.jpg">
+    <img src="images/raddir-sem-heyrast-ekki-mynd2.jpg">
+    <img src="images/raddir-sem-heyrast-ekki-mynd3.jpg">
+    <img src="images/raddir-sem-heyrast-ekki-mynd4.jpg">
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <h3>LiteFun – SOFIA</h3>
+  <p>Kvikmyndataka</p>
+  <div class="imgs">
+    <img src="images/litefun-sofia-mynd1.jpg">
+    <img src="images/litefun-sofia-mynd2.jpg">
+    <img src="images/litefun-sofia-mynd3.jpg">
+    <img src="images/litefun-sofia-mynd4.jpg">
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+  <h3>Ertu góður, maður?</h3>
+  <p>Kvikmyndataka</p>
+  <div class="imgs">
+    <img src="images/e-g-m-mynd1.jpg">
+    <img src="images/e-g-m-mynd2.jpg">
+    <img src="images/e-g-m-mynd3.jpg">
+    <img src="images/e-g-m-mynd4.jpg">
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+  <h3>COULROPHOBIA</h3>
+  <p>Kvikmyndataka</p>
+  <div class="imgs">
+    <img src="images/coulrophobia-mynd1.jpg">
+    <img src="images/coulrophobia-mynd2.jpg">
+    <img src="images/coulrophobia-mynd3.jpg">
+    <img src="images/coulrophobia-mynd4.jpg">
+  </div>
 </div>
 
 </div>
-
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-32 px-6 max-w-4xl mx-auto">
-<h2 class="text-4xl mb-6">About</h2>
-<p class="text-gray-300 leading-relaxed">
-I am an Icelandic filmmaker focused on cinematic storytelling,
-natural light, and visual atmosphere.
-</p>
+<!-- PHOTO -->
+<section class="section">
+
+<h2>Ljósmyndir</h2>
+
+<div class="photo-grid">
+<img src="images/ljosmynd-1.jpg">
+<img src="images/ljosmynd-2.jpg">
+<img src="images/ljosmynd-3.jpg">
+<img src="images/ljosmynd-4.jpg">
+<img src="images/ljosmynd-5.jpg">
+<img src="images/ljosmynd-6.jpg">
+<img src="images/ljosmynd-7.jpg">
+<img src="images/ljosmynd-8.jpg">
+<img src="images/ljosmynd-9.jpg">
+<img src="images/ljosmynd-10.jpg">
+</div>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-32 px-6 text-center">
-<h2 class="text-4xl mb-6">Let's work</h2>
-<a class="border px-8 py-4 uppercase text-xs hover:bg-white hover:text-black transition"
-href="mailto:you@email.com">
-Email Me
-</a>
+<section class="section contact">
+
+<h2>Contact</h2>
+
+<p>Email: <b>unnardarrimagnusson@gmail.com</b></p>
+
+<p>
+Instagram:
+:contentReference[oaicite:0]{index=0}
+</p>
+
+<p>
+YouTube:
+:contentReference[oaicite:1]{index=1}
+</p>
+
 </section>
 
-<footer class="py-10 text-center text-gray-600">
-© 2026
+<footer>
+© 2026 Unnar Darri Magnússon
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
