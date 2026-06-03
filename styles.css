@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* LOADER */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+#loader h1 {
+  letter-spacing: 1rem;
+}
+
+/* PROJECTS */
+.project {
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: 0.8s ease;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+/* FILM GRAIN */
+.grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* CINEMATIC BARS */
+.bars::before,
+.bars::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background: black;
+  left: 0;
+}
+
+.bars::before { top: 0; }
+.bars::after { bottom: 0; }
