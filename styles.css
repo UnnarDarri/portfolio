@@ -32,13 +32,6 @@ body {
   font-size: 14px;
 }
 
-/* MENU */
-.menu {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
 .nav a,
 .menu span {
   color: white;
@@ -55,7 +48,7 @@ body {
 }
 
 /* =========================
-   DROPDOWN (FIXED)
+   DROPDOWN (FIXED HOVER)
 ========================= */
 
 .dropdown {
@@ -138,52 +131,46 @@ body {
 }
 
 /* =========================
-   WORK GRID
+   WORK GRID (NO CROPPING)
 ========================= */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 30px;
 }
 
+/* CARD */
 .card {
-  position: relative;
   display: block;
-  overflow: hidden;
   text-decoration: none;
   color: white;
 }
 
+/* IMPORTANT: ORIGINAL ASPECT RATIO */
 .card img {
   width: 100%;
   height: auto;
   display: block;
+
   filter: contrast(1.1) grayscale(0.2);
   transition: 0.6s ease;
 }
 
 .card:hover img {
-  transform: scale(1.08);
+  transform: scale(1.03);
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.card:hover .overlay {
-  opacity: 1;
+/* TITLE UNDER IMAGE */
+.card-title {
+  margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.8;
 }
 
 /* =========================
-   PHOTOGRAPHY
+   PHOTOGRAPHY GRID
 ========================= */
 
 .photo {
@@ -194,8 +181,8 @@ body {
 
 .photo img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
+  display: block;
   filter: grayscale(0.3);
   transition: 0.3s;
 }
@@ -205,7 +192,7 @@ body {
 }
 
 /* =========================
-   CONTACT
+   CONTACT LINKS
 ========================= */
 
 .section a {
@@ -219,25 +206,33 @@ body {
 }
 
 /* =========================
-   PROJECT PAGE
+   ABOUT PAGE
 ========================= */
 
-img {
-  max-width: 100%;
-  display: block;
-  margin-top: 20px;
+.about-page {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  filter: grayscale(0.2);
 }
 
 /* =========================
-   BACK BUTTON (CLEAN)
+   BACK BUTTON (CINEMATIC)
 ========================= */
 
 .back {
   position: fixed;
   top: 20px;
   left: 20px;
-  padding: 10px 14px;
 
+  padding: 10px 14px;
   background: rgba(0,0,0,0.6);
   border: 1px solid rgba(255,255,255,0.2);
   backdrop-filter: blur(10px);
