@@ -78,18 +78,36 @@ body {
   font-size: 12px;
 }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* HERO VIDEO */
+
+.hero-video {
+  position: relative;
+  height: 200vh;
 }
 
-.hero h1 {
-  font-size: 70px;
-  letter-spacing: 8px;
+.showreel-video {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  max-height: 100vh;
+
+  display: block;
+  margin: 0 auto;
+
+  background: black;
+}
+
+.hero-content {
+  position: absolute;
+
+  top: 45vh;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  z-index: 5;
 }
 
 /* SECTION */
