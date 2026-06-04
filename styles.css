@@ -150,3 +150,23 @@ body {
   text-decoration: none;
   font-size: 12px;
 }
+.desc {
+  opacity: 0.7;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.video {
+  margin-bottom: 60px;
+}
+
+.video iframe {
+  border: none;
+  border-radius: 4px;
+}
+
+.section img {
+  width: 100%;
+  display: block;
+  margin-top: 25px;
+}
