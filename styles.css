@@ -180,6 +180,7 @@ body {
 .showreel-video {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .hero-content {
