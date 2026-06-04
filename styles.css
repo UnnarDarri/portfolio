@@ -135,3 +135,54 @@ footer {
   padding: 50px;
   opacity: 0.4;
 }
+.menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background: rgba(0,0,0,0.9);
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 15px;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CLEAN BACK BUTTON */
+.back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.back:hover {
+  background: white;
+  color: black;
+}
