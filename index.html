@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Unnar Darri | Film</title>
 
 <link rel="stylesheet" href="styles.css">
@@ -11,7 +10,7 @@
 
 <body>
 
-<!-- HEADER -->
+<!-- NAV -->
 <header class="nav">
 
   <div class="logo">UNNAR DARRI</div>
@@ -22,31 +21,23 @@
       <span>Work ▾</span>
 
       <div class="dropdown-content">
-        <a href="#short">Short Films</a>
-        <a href="#doc">Documentaries</a>
-        <a href="#ads">Advertisements</a>
+        <a href="#work">Short Films</a>
         <a href="#photo">Photography</a>
       </div>
     </div>
 
-    <a href="about.html">About</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
 
   </nav>
 
 </header>
 
+<!-- HERO SHOWREEL -->
 <section class="hero-video">
 
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    class="showreel-video">
-
+  <video autoplay muted loop playsinline class="showreel-video">
     <source src="videos/showreel.mp4" type="video/mp4">
-
   </video>
 
   <div class="hero-content">
@@ -56,11 +47,9 @@
 
 </section>
 
-<section class="portfolio-content">
+<!-- CONTENT -->
+<div class="portfolio-content">
 
-  <!-- HÉR KEMUR ALLT WORK GRID-IÐ ÞITT -->
-
-</section>
 <!-- WORK -->
 <section id="work" class="section">
   <h2>Selected Work</h2>
@@ -69,43 +58,43 @@
 
     <a class="card" href="rolegur-gaur.html">
       <img src="images/rolegur-gaur-mynd1.jpg">
-      <div class="overlay">Rólegur Gaur</div>
+      <div class="card-title">Rólegur Gaur</div>
     </a>
 
     <a class="card" href="djupt-inn-i-skog.html">
       <img src="images/Djupt-inn-i-skog-mynd1.jpg">
-      <div class="overlay">Djúpt inn í Skóg</div>
+      <div class="card-title">Djúpt inn í Skóg</div>
     </a>
 
     <a class="card" href="gesturinn.html">
       <img src="images/gesturinn-mynd1.jpg">
-      <div class="overlay">Gesturinn</div>
+      <div class="card-title">Gesturinn</div>
     </a>
 
     <a class="card" href="raddir.html">
       <img src="images/raddir-sem-heyrast-ekki-mynd1.jpg">
-      <div class="overlay">Raddir</div>
+      <div class="card-title">Raddir</div>
     </a>
 
     <a class="card" href="litefun.html">
       <img src="images/litefun-sofia-mynd1.jpg">
-      <div class="overlay">LiteFun – SOFIA</div>
+      <div class="card-title">LiteFun – SOFIA</div>
     </a>
 
     <a class="card" href="egm.html">
       <img src="images/e-g-m-mynd1.jpg">
-      <div class="overlay">Ertu góður, maður?</div>
+      <div class="card-title">Ertu góður, maður?</div>
     </a>
 
     <a class="card" href="coulrophobia.html">
       <img src="images/coulrophobia-mynd1.jpg">
-      <div class="overlay">COULROPHOBIA</div>
+      <div class="card-title">COULROPHOBIA</div>
     </a>
 
   </div>
 </section>
 
-<!-- PHOTO -->
+<!-- PHOTOGRAPHY -->
 <section id="photo" class="section">
   <h2>Photography</h2>
 
@@ -136,6 +125,8 @@
 </section>
 
 <footer>© 2026 Unnar Darri</footer>
+
+</div>
 
 </body>
 </html>
