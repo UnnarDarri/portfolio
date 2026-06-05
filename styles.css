@@ -52,7 +52,9 @@ body {
   position: relative;
   height: 120vh;
 }
-
+.hero-video {
+  padding-top: 80px;
+}
 .showreel-video {
   position: sticky;
   top: 0;
