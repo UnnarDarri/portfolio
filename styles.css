@@ -197,7 +197,8 @@ body {
 .cat-img {
   width: 500px;
   height: 300px;
-  object-fit: contain;
+  object-fit: none;
+  object-position: center;
   background: black;
 }
   transition: transform 0.4s ease;
