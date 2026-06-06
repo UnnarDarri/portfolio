@@ -254,7 +254,7 @@ body {
 
 /* PAGE TITLE */
 .page-title {
-  padding: 140px 60px 40px;
+  padding: 140px 60px 60px;
 }
 
 .page-title h1 {
@@ -427,7 +427,7 @@ body {
 
 .photo-masonry img:hover {
   transform: scale(1.03);
-  filter: contrast(1.15);
+  filter: contrast(1);
 }
 
 @media (max-width: 900px) {
