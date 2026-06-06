@@ -87,41 +87,40 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  function rotate(img, images) {
-    let i = 0;
-
-    setInterval(() => {
-      i = (i + 1) % images.length;
-
-      img.style.opacity = 0;
-
-      setTimeout(() => {
-        img.src = images[i];
-        img.style.opacity = 1;
-      }, 300);
-
-    }, 5000);
-  }
-
   const cinema = document.getElementById("cinema-thumb");
-  const photo = document.getElementById("photo-thumb");
 
-  if (cinema) {
-    rotate(cinema, [
-      "images/rolegur-gaur-mynd1.jpg",
-      "images/djupt-inn-i-skog-mynd1.jpg",
-      "images/gesturinn-mynd1.jpg",
-      "images/coulrophobia-mynd1.jpg"
-    ]);
-  }
+  if (!cinema) return;
 
-  if (photo) {
-    rotate(photo, [
-      "images/litefun-sofia-mynd1.jpg",
-      "images/egm-mynd1.jpg",
-      "images/raddir-sem-heyrast-ekki-mynd1.jpg"
-    ]);
-  }
+  const images = [
+    "images/rolegur-gaur-mynd1.jpg",
+    "images/djupt-inn-i-skog-mynd1.jpg",
+    "images/gesturinn-mynd1.jpg",
+    "images/coulrophobia-mynd1.jpg"
+  ];
+
+  let i = 0;
+
+  setInterval(() => {
+
+    i = (i + 1) % images.length;
+
+    cinema.style.transform = "translateX(30px)";
+    cinema.style.opacity = "0";
+
+    setTimeout(() => {
+      cinema.src = images[i];
+      cinema.style.transform = "translateX(-30px)";
+    }, 200);
+
+    setTimeout(() => {
+      cinema.style.transform = "translateX(0)";
+      cinema.style.opacity = "1";
+    }, 400);
+
+  }, 5000);
+
+});
+</script>
 
 });
 </script>
