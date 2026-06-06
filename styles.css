@@ -18,10 +18,12 @@ body {
   align-items: center;
 
   padding: 20px 60px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+
+  background: transparent;
+  backdrop-filter: none;
 
   z-index: 99999;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 .logo {
   margin-left: 10px;
@@ -155,4 +157,8 @@ footer {
   text-align: center;
   padding: 50px;
   opacity: 0.4;
+}
+.nav.scrolled {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
 }
