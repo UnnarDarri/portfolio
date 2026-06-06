@@ -103,6 +103,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const images = document.querySelectorAll(".rotating-img");
+
+  images.forEach(img => {
+
+    const base = img.src.replace("mynd1.jpg", "");
+
+    const frames = [
+      img.src,
+      base + "mynd2.jpg",
+      base + "mynd3.jpg",
+      base + "mynd4.jpg"
+    ];
+
+    let i = 0;
+
+    setInterval(() => {
+      i = (i + 1) % frames.length;
+
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        img.src = frames[i];
+        img.style.opacity = 1;
+      }, 300);
+
+    }, 5000);
+
+  });
+
+});
+</script>
 </body>
 </html>
