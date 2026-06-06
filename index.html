@@ -7,20 +7,7 @@
 <title>Unnar Darri | Film</title>
 <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-window.addEventListener("scroll", function () {
 
-  const nav = document.querySelector(".nav");
-  const hero = document.querySelector(".hero");
-
-  if (window.scrollY > hero.offsetHeight - 100) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
-
-});
-</script>
 <body>
 
 <!-- HEADER -->
@@ -28,16 +15,15 @@ window.addEventListener("scroll", function () {
 
   <a class="logo" href="index.html">UNNAR DARRI</a>
 
-<nav class="menu">
-  <a href="video.html">Video</a>
-  <a href="photography.html">Photography</a>
-  <a href="about.html">About</a>
-</nav>
+  <nav class="menu">
+    <a href="video.html">Video</a>
+    <a href="photography.html">Photography</a>
+    <a href="about.html">About</a>
   </nav>
 
 </header>
 
-<!-- HERO SHOWREEL (UNCHANGED SCALE) -->
+<!-- HERO SHOWREEL -->
 <section class="hero">
 
   <video autoplay muted loop playsinline class="showreel">
@@ -98,3 +84,25 @@ window.addEventListener("scroll", function () {
   </div>
 
 </footer>
+
+<!-- SCRIPTS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // NAV SCROLL EFFECT
+  const nav = document.querySelector(".nav");
+  const hero = document.querySelector(".hero");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > hero.offsetHeight - 100) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+
+});
+</script>
+
+</body>
+</html>
