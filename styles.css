@@ -332,3 +332,41 @@ body {
   background: white;
   color: black;
 }
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* IMPORTANT: title higher feel */
+
+  gap: 80px;
+  margin-bottom: 140px;
+}
+
+/* TEXT SIDE */
+.project-text {
+  flex: 1;
+  padding-top: 20px; /* pushes text slightly up */
+}
+
+.project-text h3 {
+  font-size: 52px;   /* bigger title */
+  margin: 0 0 20px;
+  line-height: 1;
+}
+
+.project-text p {
+  max-width: 520px;
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* IMAGE SIDE BIGGER */
+.project-image {
+  flex: 1.2; /* makes image bigger than text */
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
