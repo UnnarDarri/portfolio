@@ -244,3 +244,91 @@ body {
   background: rgba(0,0,0,0.65);
   backdrop-filter: blur(12px);
 }
+
+/* ACTIVE NAV UNDERLINE */
+.menu a.active {
+  border-bottom: 1px solid white;
+  padding-bottom: 4px;
+  opacity: 1;
+}
+
+/* PAGE TITLE */
+.page-title {
+  padding: 140px 60px 40px;
+}
+
+.page-title h1 {
+  font-size: 80px;
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+/* CATEGORY TITLE */
+.category-title {
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin: 80px 60px 40px;
+  opacity: 0.9;
+}
+
+/* PROJECT LAYOUT */
+.project-section {
+  padding: 0 60px;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 60px;
+  margin-bottom: 120px;
+}
+
+/* TEXT SIDE */
+.project-text {
+  flex: 1;
+}
+
+.project-text h3 {
+  font-size: 40px;
+  margin: 0 0 15px;
+}
+
+.project-text p {
+  max-width: 500px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* IMAGE SIDE */
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* BUTTON (reuse) */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 12px;
+
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
