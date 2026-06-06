@@ -10,15 +10,15 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px 60px;
+  padding: 20px 40px; /* minnkað frá 60px -> fixar overflow */
 
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .logo {
@@ -31,6 +31,9 @@ body {
 .menu {
   display: flex;
   gap: 30px;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: visible;
 }
 
 .menu a {
@@ -208,9 +211,10 @@ body {
 
 .footer-contact {
   display: flex;
-  gap: 50px;              /* meira space */
   justify-content: center;
-  flex: 1;                /* pushar miðju layout */
+  flex: 1;
+
+  gap: 60px;
 }
 
 .footer-contact a {
