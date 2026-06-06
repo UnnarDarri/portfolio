@@ -54,24 +54,18 @@ body {
 
 /* HERO SHOWREEL */
 .hero {
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  width: 100%;
   overflow: hidden;
 }
 
 .showreel {
   width: 100%;
-  height: 100%;
-
-  object-fit: contain;
-  object-position: top center;
+  height: auto;
 
   display: block;
-  background: black;
-}
 
+  object-fit: contain;
+}
 /* CATEGORY SECTION */
 .categories {
   display: flex;
