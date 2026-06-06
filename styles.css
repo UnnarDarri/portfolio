@@ -54,20 +54,38 @@ body {
 /* HERO VIDEO FIXED */
 .hero-video {
   position: relative;
-  height: 200vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
+/* VIDEO FILLAR VIEWPORT ALLTAF (NO CROP ISSUES) */
 .showreel-video {
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
 
   width: 100%;
-  max-height: 100vh;
+  height: 100%;
 
-  display: block;
-  margin: 0 auto;
+  object-fit: cover;
+}
 
-  background: black;
+/* TEXTI OVERLAY SEM HREYFIST EKKI MEÐ VIDEO */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* HEADER FIX (ALDREI FARA UNDIR VIDEO) */
+.nav {
+  z-index: 9999;
 }
 
 /* HERO TEXT */
