@@ -196,15 +196,15 @@ body {
 
 .cat-img {
   width: 100%;
-  height: auto;
+  max-width: 500px;
+
+  aspect-ratio: 5
+    24/ 1;
+
   display: block;
-}
-.cat-block {
-  width: 500px;
-}
-.cat-block:hover .cat-img {
-  transform: scale(1.05);
-  filter: contrast(1.1);
+
+  object-fit: contain;
+  background: black;
 }
 
 /* FOOTER */
