@@ -16,11 +16,15 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px 40px; /* minnkað frá 60px -> fixar overflow */
+  padding: 20px 40px;
+
+  background: transparent;
+  backdrop-filter: none;
 
   z-index: 99999;
-}
 
+  transition: all 0.3s ease;
+}
 .logo {
   font-size: 14px;
   letter-spacing: 4px;
@@ -98,16 +102,20 @@ body {
 }
 
 .hire-text h1 {
-  font-size: 70px;
+  font-size: 110px;
   margin: 0;
-  letter-spacing: 3px;
+  line-height: 0.95;
 }
 
 .hire-text p {
-  margin-top: 20px;
-  max-width: 400px;
+  margin-top: 25px;
+
+  max-width: 650px;
+
+  font-size: 24px;
+  line-height: 1.6;
+
   opacity: 0.8;
-  line-height: 1.5;
 }
 
 .btn {
@@ -187,11 +195,11 @@ body {
 }
 
 .cat-img {
-  width: 300px;
-  height: 180px;
+  width: 500px;
+  height: 300px;
   object-fit: cover;
 
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .cat-block:hover .cat-img {
@@ -231,4 +239,8 @@ body {
 .footer-contact a:hover {
   opacity: 1;
   transform: translateY(-2px);
+}
+.nav.scrolled {
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(12px);
 }
