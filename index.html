@@ -37,12 +37,12 @@
 
   <div class="cat-block">
     <a href="video.html" class="cat-title">Cinematography</a>
-    <img src="images/cinematography-thumb.jpg" class="cat-img">
+    <img src="images/cinematography-thumb.jpg" class="cat-img" id="cinema-thumb">
   </div>
 
   <div class="cat-block">
     <a href="photography.html" class="cat-title">Photography</a>
-    <img src="images/photography-thumb.jpg" class="cat-img">
+    <img src="images/photography-thumb.jpg" class="cat-img" id="photo-thumb">
   </div>
 
 </section>
@@ -75,67 +75,56 @@
   </div>
 
   <div class="footer-contact">
-
     <a href="mailto:unnardarrimagnusson@gmail.com">Email</a>
     <a href="tel:+3540000000">Phone</a>
     <a href="https://instagram.com/unnar_darri">Instagram</a>
     <a href="https://youtube.com/@studiokria">YouTube</a>
-
   </div>
 
 </footer>
 
-<!-- SCRIPTS -->
+<!-- SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  // NAV SCROLL EFFECT
-  const nav = document.querySelector(".nav");
-  const hero = document.querySelector(".hero");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > hero.offsetHeight - 100) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
-
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const images = document.querySelectorAll(".rotating-img");
-
-  images.forEach(img => {
-
-    const base = img.src.replace("mynd1.jpg", "");
-
-    const frames = [
-      img.src,
-      base + "mynd2.jpg",
-      base + "mynd3.jpg",
-      base + "mynd4.jpg"
-    ];
-
+  function rotate(img, images) {
     let i = 0;
 
     setInterval(() => {
-      i = (i + 1) % frames.length;
+      i = (i + 1) % images.length;
 
       img.style.opacity = 0;
 
       setTimeout(() => {
-        img.src = frames[i];
+        img.src = images[i];
         img.style.opacity = 1;
       }, 300);
 
     }, 5000);
+  }
 
-  });
+  const cinema = document.getElementById("cinema-thumb");
+  const photo = document.getElementById("photo-thumb");
+
+  if (cinema) {
+    rotate(cinema, [
+      "images/rolegur-gaur-mynd1.jpg",
+      "images/djupt-inn-i-skog-mynd1.jpg",
+      "images/gesturinn-mynd1.jpg",
+      "images/coulrophobia-mynd1.jpg"
+    ]);
+  }
+
+  if (photo) {
+    rotate(photo, [
+      "images/litefun-sofia-mynd1.jpg",
+      "images/egm-mynd1.jpg",
+      "images/raddir-sem-heyrast-ekki-mynd1.jpg"
+    ]);
+  }
 
 });
 </script>
+
 </body>
 </html>
