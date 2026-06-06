@@ -7,7 +7,20 @@
 <title>Unnar Darri | Film</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+window.addEventListener("scroll", function () {
 
+  const nav = document.querySelector(".nav");
+  const hero = document.querySelector(".hero");
+
+  if (window.scrollY > hero.offsetHeight - 100) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+
+});
+</script>
 <body>
 
 <!-- HEADER -->
