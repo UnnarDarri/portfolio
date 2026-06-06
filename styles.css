@@ -54,7 +54,7 @@ body {
 /* HERO VIDEO FIXED */
 .hero-video {
   position: relative;
-  min-height: calc(100vh + 400px);
+  height: 200vh;
 }
 
 .showreel-video {
@@ -72,12 +72,14 @@ body {
 
 /* HERO TEXT */
 .hero-content {
-  position: absolute;
+  position: fixed;
   top: 45vh;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 5;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .hero-content h1 {
