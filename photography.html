@@ -66,13 +66,18 @@
 
 </footer>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
 
   const images = document.querySelectorAll(".photo-masonry img");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
 
-  images.forEach(img => {
+  if (!lightbox || !lightboxImg) {
+    console.log("Lightbox missing");
+    return;
+  }
+
+  images.forEach((img) => {
 
     img.addEventListener("click", () => {
       lightbox.style.display = "flex";
@@ -86,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
     lightboxImg.src = "";
   });
 
-});
+};
+</script>
 </script>
 </body>
 </html>
