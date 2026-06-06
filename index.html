@@ -118,8 +118,11 @@
 <script>
 window.addEventListener("scroll", function () {
   const nav = document.querySelector(".nav");
+  const hero = document.querySelector(".hero-video");
 
-  if (window.scrollY > 50) {
+  const heroBottom = hero.offsetHeight;
+
+  if (window.scrollY > heroBottom - 80) {
     nav.classList.add("scrolled");
   } else {
     nav.classList.remove("scrolled");
