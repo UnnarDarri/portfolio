@@ -403,3 +403,37 @@ body {
 .rotating-img {
   transition: opacity 0.6s ease;
 }
+.photo-masonry {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 80px 60px;
+}
+
+.photo-masonry img {
+  width: 100%;
+  margin-bottom: 20px;
+
+  display: block;
+
+  break-inside: avoid;
+
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.photo-masonry img:hover {
+  transform: scale(1.03);
+  filter: contrast(1.1);
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .photo-masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .photo-masonry {
+    column-count: 1;
+  }
+}
