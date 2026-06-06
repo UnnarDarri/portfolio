@@ -18,12 +18,10 @@ body {
   align-items: center;
 
   padding: 20px 60px;
-
-  background: transparent;
-  backdrop-filter: none;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
 
   z-index: 99999;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 .logo {
   margin-left: 10px;
@@ -61,35 +59,34 @@ body {
 /* HERO */
 .hero-video {
   position: relative;
-  height: 100vh;
+  height: 200vh; /* IMPORTANT: gives scroll space */
   overflow: hidden;
 }
 
-/* VIDEO LAYER */
-.hero-video {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
+/* STICKY VIDEO LAYER */
 .showreel-video {
+  position: sticky;
+  top: 0;
+
   width: 100%;
-  height: 100%;
-  display: block;
+  height: 100vh;
+
   object-fit: contain;
   background: black;
 }
 
+/* TEXT OVER VIDEO */
 .hero-content {
   position: absolute;
-  top: 50%;
+  top: 50vh;
   left: 50%;
+
   transform: translate(-50%, -50%);
   text-align: center;
+
   z-index: 2;
   pointer-events: none;
 }
-
 /* CONTENT */
 .section {
   padding: 120px 60px;
@@ -149,17 +146,7 @@ footer {
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
 }
-.hero-video::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 
-  height: 40vh;
-  background: linear-gradient(to bottom, transparent, #0a0a0a);
-  pointer-events: none;
-}
 .section:first-of-type {
   margin-top: 0;
 }
