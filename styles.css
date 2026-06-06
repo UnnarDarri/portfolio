@@ -11,9 +11,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 99999;
-}
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
@@ -22,7 +20,8 @@ body {
   padding: 20px 60px;
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+
+  z-index: 99999;
 }
 
 .logo {
@@ -35,8 +34,7 @@ body {
   gap: 25px;
 }
 
-.nav a,
-.menu span {
+.nav a {
   color: white;
   text-decoration: none;
   font-size: 12px;
@@ -44,33 +42,33 @@ body {
   opacity: 0.7;
 }
 
-.nav a:hover,
-.menu span:hover {
+.nav a:hover {
   opacity: 1;
 }
+
 .menu a.active {
   opacity: 1;
   border-bottom: 1px solid white;
   padding-bottom: 3px;
 }
-/* HERO WRAPPER */
+
+/* HERO */
 .hero-video {
   position: relative;
   height: 100vh;
-  padding-top: 80px;
+  overflow: hidden;
 }
 
-/* VIDEO BACKGROUND (NO CROPPING) */
+/* VIDEO (NO CROPPING EVER) */
 .showreel-video {
   width: 100%;
   height: 100%;
   display: block;
-
   object-fit: contain;
   background: black;
 }
 
-/* TEXT OVER VIDEO */
+/* HERO TEXT */
 .hero-content {
   position: absolute;
   top: 50%;
@@ -79,38 +77,8 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 
-  z-index: 5;
+  z-index: 2;
   pointer-events: none;
-}
-
-/* HEADER ALWAYS ABOVE EVERYTHING */
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-}
-
-/* HEADER ALWAYS ABOVE EVERYTHING */
-.nav {
-  z-index: 9999;
-}
-
-/* HEADER FIX (ALDREI FARA UNDIR VIDEO) */
-.nav {
-  z-index: 9999;
-}
-
-/* HERO TEXT */
-.hero-content {
-  position: fixed;
-  top: 45vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1;
-  opacity: 1;
-  transition: opacity 0.3s ease;
 }
 
 .hero-content h1 {
@@ -124,14 +92,7 @@ body {
   opacity: 0.8;
 }
 
-/* CONTENT WRAPPER */
-.portfolio-content {
-  background: #0a0a0a;
-  position: relative;
-  z-index: 10;
-}
-
-/* SECTIONS */
+/* CONTENT */
 .section {
   padding: 120px 60px;
   max-width: 1600px;
@@ -147,7 +108,6 @@ body {
 
 .card img {
   width: 100%;
-  height: auto;
   display: block;
   filter: contrast(1.1) grayscale(0.2);
 }
@@ -168,10 +128,9 @@ body {
 
 .photo img {
   width: 100%;
-  height: auto;
 }
 
-/* CONTACT LINKS */
+/* LINKS */
 .section a {
   color: white;
   text-decoration: none;
