@@ -1,11 +1,15 @@
+---
+title: Unnar Darri
+---
+
 <!DOCTYPE html>
 <html lang="is">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Unnar Darri | Film</title>
-<link rel="stylesheet" href="styles.css">
+<title>{{ title }}</title>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
@@ -13,12 +17,12 @@
 <!-- HEADER -->
 <header class="nav">
 
-  <a class="logo" href="index.html">UNNAR DARRI</a>
+  <a class="logo" href="/">UNNAR DARRI</a>
 
   <nav class="menu">
-    <a href="video.html">Video</a>
-    <a href="photography.html">Photography</a>
-    <a href="about.html">About</a>
+    <a href="/video">Video</a>
+    <a href="/photography">Photography</a>
+    <a href="/about">About</a>
   </nav>
 
 </header>
@@ -27,7 +31,7 @@
 <section class="hero">
 
   <video autoplay muted loop playsinline class="showreel">
-    <source src="videos/showreel.mp4" type="video/mp4">
+    <source src="/static/videos/showreel.mp4" type="video/mp4">
   </video>
 
 </section>
@@ -36,13 +40,13 @@
 <section class="categories">
 
   <div class="cat-block">
-    <a href="video.html" class="cat-title">Cinematography</a>
-    <img src="images/cinematography-thumb.jpg" class="cat-img" id="cinema-thumb">
+    <a href="video/" class="cat-title">Cinematography</a>
+    <img src="/static/images/cinematography-thumb.jpg" class="cat-img" id="cinema-thumb">
   </div>
 
   <div class="cat-block">
-    <a href="photography.html" class="cat-title">Photography</a>
-    <img src="images/photography-thumb.jpg" class="cat-img" id="photo-thumb">
+    <a href="photography/" class="cat-title">Photography</a>
+    <img src="/static/images/photography-thumb.jpg" class="cat-img" id="photo-thumb">
   </div>
 
 </section>
@@ -58,11 +62,11 @@
       Focused on cinematic storytelling and visual emotion.
     </p>
 
-    <a href="about.html" class="btn">More</a>
+    <a href="about/" class="btn">More</a>
   </div>
 
   <div class="hire-image">
-    <img src="images/portrait.jpg" alt="Portrait">
+    <img src="/static/images/portrait.jpg" alt="Portrait">
   </div>
 
 </section>
@@ -91,10 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!cinema) return;
 
   const images = [
-    "images/rolegur-gaur-mynd1.jpg",
-    "images/djupt-inn-i-skog-mynd1.jpg",
-    "images/gesturinn-mynd1.jpg",
-    "images/coulrophobia-mynd1.jpg"
+    "/static/images/rolegur-gaur-mynd1.jpg",
+    "/static/images/djupt-inn-i-skog-mynd1.jpg",
+    "/static/images/gesturinn-mynd1.jpg",
+    "/static/images/coulrophobia-mynd1.jpg"
   ];
 
   // PRELOAD (IMPORTANT FIX FOR FLASH)
