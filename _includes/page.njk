@@ -17,12 +17,12 @@ title: Page template
   <!-- HEADER -->
   <header class="nav">
 
-    <a class="logo" href="/">UNNAR DARRI</a>
+    <a class="logo" href="/">Unnar Darri</a>
 
     <nav class="menu">
-      <a href="/cinematography">Cinematography</a>
-      <a href="/photography">Photography</a>
-      <a href="/about">About</a>
+      <a class="{{ 'active' if '/cinematography' in page.url }}" href="/cinematography">Cinematography</a>
+      <a class="{{ 'active' if '/photography' in page.url }}" href="/photography">Photography</a>
+      <a class="{{ 'active' if '/about' in page.url }}" href="/about">About</a>
     </nav>
 
   </header>
@@ -31,10 +31,7 @@ title: Page template
 
   <!-- FOOTER -->
   <footer class="footer">
-
-    <div class="copyright">
-      © 2026 Unnar Darri
-    </div>
+    <small class="copyright">© 2026 Unnar Darri</small>
 
     <div class="footer-contact">
       <a href="mailto:unnardarrimagnusson@gmail.com">Email</a>
