@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="is">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Photography | Unnar Darri</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox">
-  <img id="lightbox-img" src="">
-</div>
-<!-- HEADER -->
-<header class="nav">
-
-  <a class="logo" href="index.html">UNNAR DARRI</a>
-
-  <nav class="menu">
-    <a href="index.html">Home</a>
-    <a href="video.html">Video</a>
-    <a href="photography.html" class="active">Photography</a>
-    <a href="about.html">About</a>
-  </nav>
-
-</header>
-
+---
+layout: page.njk
+title: Photography
+---
 <!-- PAGE TITLE -->
 <section class="section">
   <h2>Photography</h2>
@@ -34,7 +9,6 @@
 
 <!-- FUNKY GRID -->
 <section class="photo-masonry">
-
   <img src="/static/images/ljosmynd-1.jpg">
   <img src="/static/images/ljosmynd-2.jpg">
   <img src="/static/images/ljosmynd-3.jpg">
@@ -47,52 +21,33 @@
   <img src="/static/images/ljosmynd-10.jpg">
   <img src="/static/images/ljosmynd-11.jpg">
   <img src="/static/images/ljosmynd-12.jpg">
-
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-
-  <div class="copyright">
-    © 2026 Unnar Darri
-  </div>
-
-  <div class="footer-contact">
-    <a href="mailto:unnardarrimagnusson@gmail.com">Email</a>
-    <a href="tel:+3540000000">Phone</a>
-    <a href="https://instagram.com/unnar_darri">Instagram</a>
-    <a href="https://youtube.com/@studiokria">YouTube</a>
-  </div>
-
-</footer>
 <script>
-window.onload = function () {
+  window.onload = function () {
 
-  const images = document.querySelectorAll(".photo-masonry img");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".photo-masonry img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-  if (!lightbox || !lightboxImg) {
-    console.log("Lightbox missing");
-    return;
-  }
+    if (!lightbox || !lightboxImg) {
+      console.log("Lightbox missing");
+      return;
+    }
 
-  images.forEach((img) => {
+    images.forEach((img) => {
 
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+
     });
 
-  });
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    });
 
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-    lightboxImg.src = "";
-  });
-
-};
+  };
 </script>
-</script>
-</body>
-</html>
