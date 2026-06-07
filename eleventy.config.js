@@ -8,5 +8,5 @@ export default function (eleventyConfig) {
 }
 
 export const config = {
-  pathPrefix: "/portfolio",
+  pathPrefix: "",
 }
