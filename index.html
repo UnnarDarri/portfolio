@@ -2,7 +2,6 @@
 layout: page.njk
 title: Home
 ---
-
 <!-- HERO SHOWREEL -->
 <section class="hero">
   <video autoplay muted loop playsinline class="showreel">
@@ -18,14 +17,18 @@ title: Home
     <figcaption class="cat-title">
       <a href="/cinematography">Cinematography</a>
     </figcaption>
-    <img src="/static/images/cinematography-thumb.jpg" class="cat-img" id="cinema-thumb">
+    <div class="cat-img">
+      <img src="/static/images/cinematography-thumb.jpg" id="cinema-thumb">
+    </div>
   </figure>
 
   <figure class="cat-block">
     <figcaption class="cat-title">
       <a href="/photography">Photography</a>
     </figcaption>
-    <img src="/static/images/photography-thumb.jpg" class="cat-img" id="photo-thumb">
+    <div class="cat-img">
+      <img src="/static/images/photography-thumb.jpg" id="photo-thumb">
+    </div>
   </figure>
 
 </section>
@@ -51,56 +54,20 @@ title: Home
 </section>
 
 <!-- SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+<script type="module">
+  import initCategoryThumbnails from "{{ '/js/thumbnails.js' | htmlBaseUrl }}";
 
-  const cinema = document.getElementById("cinema-thumb");
-  if (!cinema) return;
-
-  const images = [
-    "/static/images/rolegur-gaur-mynd1.jpg",
-    "/static/images/djupt-inn-i-skog-mynd1.jpg",
-    "/static/images/gesturinn-mynd1.jpg",
-    "/static/images/coulrophobia-mynd1.jpg"
+  const cinemaThumbnail = document.getElementById("cinema-thumb");
+  const cinemaImages = [
+    "{{ '/static/images/rolegur-gaur-mynd1.jpg' | htmlBaseUrl }}",
+    "{{ '/static/images/djupt-inn-i-skog-mynd1.jpg' | htmlBaseUrl }}",
+    "{{ '/static/images/gesturinn-mynd1.jpg' | htmlBaseUrl }}",
+    "{{ '/static/images/coulrophobia-mynd1.jpg' | htmlBaseUrl }}"
   ];
 
-  // PRELOAD (IMPORTANT FIX FOR FLASH)
-  images.forEach(src => {
-    const img = new Image();
-    img.src = src;
-  });
-
-  let i = 0;
-
-  // create second layer image
-  const ghost = cinema.cloneNode();
-  ghost.style.position = "absolute";
-  ghost.style.top = 0;
-  ghost.style.left = 0;
-  ghost.style.width = "100%";
-  ghost.style.height = "100%";
-  ghost.style.objectFit = "inherit";
-  ghost.style.opacity = 0;
-  ghost.style.transition = "opacity 0.6s ease";
-
-  cinema.parentElement.style.position = "relative";
-  cinema.parentElement.appendChild(ghost);
-
-  setInterval(() => {
-
-    i = (i + 1) % images.length;
-
-    ghost.src = images[i];
-    ghost.style.opacity = 1;
-    cinema.style.opacity = 0;
-
-    setTimeout(() => {
-      cinema.src = images[i];
-      cinema.style.opacity = 1;
-      ghost.style.opacity = 0;
-    }, 600);
-
-  }, 5000);
-
-});
+  const photoThumbnail = document.getElementById("photo-thumb");
+  const photoImages = cinemaImages;
+  
+  initCategoryThumbnails(cinemaThumbnail, cinemaImages);
+  initCategoryThumbnails(photoThumbnail, photoImages);
 </script>
