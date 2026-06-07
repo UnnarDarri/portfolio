@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /* HEADER */
 .nav {
   position: sticky;
@@ -36,14 +40,12 @@ a {
   backdrop-filter: blur(12px);
 
   color: #fff;
-  font-size: 0.75rem;
 
   z-index: 99999;
 }
 
 .logo {
   font-size: 1.2em;
-  letter-spacing: 4px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -54,16 +56,15 @@ a {
   align-items: center;
   flex-wrap: nowrap;
   overflow: visible;
-  letter-spacing: 2px;
 }
 
 .menu a {
-  transition: opacity 0.3s ease;
-  opacity: 0.7;
+  transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .menu a:hover {
-  opacity: 1;
+  color: #fff;
 }
 
 /* HERO SHOWREEL */
@@ -102,7 +103,6 @@ a {
   margin: 1em 0;
   font-size: 1.5rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .btn {
@@ -112,7 +112,6 @@ a {
   color: #fff;
   background-color: inherit;
   text-decoration: none;
-  letter-spacing: 2px;
   font-size: 0.75rem;
 
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -155,7 +154,6 @@ a {
 .cat-title {
   font-size: 1.25rem;
   margin-bottom: 1em;
-  letter-spacing: 2px;
   transition: transform 0.3s ease;
 }
 
@@ -226,6 +224,10 @@ a {
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+.footer .copyright {
+  font-size: 1em;
+}
+
 .footer-contact {
   display: flex;
   justify-content: flex-end;
@@ -236,8 +238,6 @@ a {
 
 .footer-contact a {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
 
   transition: color 0.3s ease,
               transform 0.3s ease;
@@ -264,16 +264,13 @@ a {
 
 .page-title h1 {
   font-size: 5rem;
-  letter-spacing: 6px;
   margin: 0;
 }
 
 /* CATEGORY TITLE */
 .category-title {
   font-size: 1.75rem;
-  letter-spacing: 3px;
   margin: 5rem 3.75rem 2.5rem;
-  color: rgba(255, 255, 255, 0.9);
 }
 
 /* PROJECT LAYOUT */
@@ -329,7 +326,6 @@ a {
 .project-title {
   font-size: 4rem;
   margin: 0;
-  letter-spacing: 3px;
 }
 
 .project-meta {
@@ -341,7 +337,6 @@ a {
 .project-desc {
   margin-top: 1.25rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
 }
 
 .project-page img {

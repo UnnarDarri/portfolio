@@ -4,7 +4,7 @@ title: Single movie
 meta: Movie meta
 description: Movie description
 ---
-<section class="project-page">
+<main class="project-page">
   <h1 class="project-title">{{ title }}</h1>
   <p class="project-meta">{{ meta }}</p>
   <p class="project-desc">{{ description }}</p>
@@ -16,4 +16,4 @@ description: Movie description
   {%- for src in images -%}
     <img src="{{ src }}">
   {%- endfor -%}
-</section>
+</main>
