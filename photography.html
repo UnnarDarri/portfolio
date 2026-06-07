@@ -28,31 +28,4 @@ title: Photography
   <img src="/static/images/ljosmynd-12.jpg">
 </section>
 
-<script>
-  window.onload = function () {
-
-    const images = document.querySelectorAll(".photo-masonry img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-
-    if (!lightbox || !lightboxImg) {
-      console.log("Lightbox missing");
-      return;
-    }
-
-    images.forEach((img) => {
-
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-      });
-
-    });
-
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-    });
-
-  };
-</script>
+<script src="/js/lightbox.js" type="module"></script>
