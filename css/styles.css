@@ -147,6 +147,7 @@ a {
 }
 
 .cat-block {
+  position: relative;
   text-align: center;
   margin: 0;
 }
@@ -155,11 +156,26 @@ a {
   font-size: 1.25rem;
   margin-bottom: 1em;
   letter-spacing: 2px;
-  position: relative;
   transition: transform 0.3s ease;
 }
 
-.cat-title::after {
+/* Make entire category card clickable */
+.cat-title a::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Category card title underline */
+.cat-title span {
+  position: relative;
+}
+
+.cat-title span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -172,11 +188,11 @@ a {
   transition: width 0.3s ease;
 }
 
-.cat-block:hover .cat-title {
+.cat-block:hover .cat-title span {
   transform: translateY(-0.2em);
 }
 
-.cat-block:hover .cat-title::after {
+.cat-block:hover .cat-title span::after {
   width: 100%;
 }
 
