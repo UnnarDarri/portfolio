@@ -124,7 +124,7 @@ a {
 
 /* CATEGORY LAYOUT */
 .categories {
-  display: grid;
+  display: flex;
   grid-template-columns: 2fr 1fr;
   justify-content: center;
   gap: 10rem;
@@ -135,6 +135,15 @@ a {
   position: relative;
   text-align: left;
   margin: 0;
+  height: fit-content;
+}
+
+.cat-block-cinema {
+  flex: 2;
+}
+
+.cat-block-photo {
+  flex: 1;
 }
 
 .cat-title {
@@ -277,9 +286,8 @@ a {
 
 .photo-masonry {
   columns: 4 280px;
-  column-gap: 25px;
+  column-gap: 1.5rem;
 
-  padding: 80px 60px;
   margin: 0 auto;
 }
 
