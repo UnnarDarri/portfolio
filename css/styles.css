@@ -57,6 +57,23 @@ a {
 .logo {
   font-size: 1rem;
   text-decoration: none;
+  position: relative;
+}
+
+.logo a::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
 }
 
 .menu {
