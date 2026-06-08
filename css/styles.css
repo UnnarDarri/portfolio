@@ -148,6 +148,7 @@ a {
 
 .cat-title {
   font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
@@ -162,14 +163,14 @@ a {
   bottom: 0;
 }
 
-/* Category card title underline */
-.cat-title span {
+/* Category card title line */
+.cat-title a > span {
   position: relative;
   display: block;
   overflow: hidden;
 }
 
-.cat-title span::after {
+.cat-title a > span::after {
   content: "";
   position: absolute;
   margin-left: 1rem;
@@ -375,5 +376,9 @@ h5 {
 
 body {
   font-size: 1.125rem;
+  font-weight: 300;
+}
+
+.light {
   font-weight: 300;
 }
