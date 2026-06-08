@@ -88,6 +88,19 @@ section {
   overflow: visible;
 }
 
+/* ACTIVE NAV UNDERLINE */
+.menu .active {
+  position: relative;
+}
+
+.menu .active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+
 /* HERO SHOWREEL */
 .hero {
   width: 100%;
@@ -231,15 +244,6 @@ section {
   flex: 1;
 
   gap: 3em;
-}
-
-/* ACTIVE NAV UNDERLINE */
-.menu .active::after {
-  content: "";
-  display: block;
-  position: relative;
-  top: 4px;
-  border-bottom: 1px solid #fff;
 }
 
 .project {
