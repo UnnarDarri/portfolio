@@ -5,15 +5,25 @@ meta: Movie meta
 description: Movie description
 ---
 <main class="project-page">
-  <h1 class="project-title">{{ title }}</h1>
-  <p class="project-meta">{{ meta }}</p>
-  <p class="project-desc">{{ description }}</p>
+  <div class="container">
+    <h1 class="project-title">{{ title }}</h1>
 
-  <div class="video">
-    <iframe width="100%" src="https://www.youtube.com/embed/{{ youtube_id }}"></iframe>
+    <div class="project-info">
+      <p class="project-meta">{{ meta }}</p>
+      <p class="project-desc">{{ description }}</p>
+    </div>
+
+    <div class="video-embed">
+      <iframe width="100%" src="https://www.youtube.com/embed/{{ youtube_id }}"></iframe>
+    </div>
+
+    <section class="project-gallery">
+      <h2>Scenery</h2>
+      <div class="project-gallery-images">
+        {%- for src in images -%}
+          <img src="{{ src }}">
+        {%- endfor -%}
+      </div>
+    </section>
   </div>
-
-  {%- for src in images -%}
-    <img src="{{ src }}">
-  {%- endfor -%}
 </main>
