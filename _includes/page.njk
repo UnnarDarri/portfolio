@@ -9,7 +9,7 @@ title: Page template
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <title>{{ title }} | Unnar Darri</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
@@ -18,13 +18,15 @@ title: Page template
 
   <!-- HEADER -->
   <header class="nav">
-
-    <a class="logo" href="/">Unnar Darri</a>
+    <div class="logo">
+      <a href="/">Unnar Darri</a>
+      <small class="subtitle">Cinematographer</small>
+    </div>
 
     <nav class="menu">
       <a class="{{ 'active' if '/cinematography' in page.url }}" href="/cinematography">Cinematography</a>
       <a class="{{ 'active' if '/photography' in page.url }}" href="/photography">Photography</a>
-      <a class="{{ 'active' if '/about' in page.url }}" href="/about">About</a>
+      <a class="{{ 'active' if '/about' in page.url }}" href="/about">About me</a>
     </nav>
 
   </header>
@@ -33,14 +35,15 @@ title: Page template
 
   <!-- FOOTER -->
   <footer class="footer">
-    <small class="copyright">&copy; 2026 Unnar Darri</small>
+    <small class="copyright"><span class="subtitle">&copy; 2026</span> Unnar Darri</small>
 
-    <div class="footer-contact">
+    <nav class="footer-contact">
+      <h2 class="subtitle">Contact</h2>
       <a href="mailto:unnar@unnardarri.com">Email</a>
       <a href="tel:+3540000000">Phone</a>
       <a href="https://instagram.com/unnar_darri">Instagram</a>
       <a href="https://youtube.com/@studiokria">YouTube</a>
-    </div>
+    </nav>
 
   </footer>
 </body>

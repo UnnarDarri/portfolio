@@ -3,80 +3,54 @@ layout: page.njk
 title: Home
 ---
 <!-- HERO SHOWREEL -->
-<section class="hero">
+<div class="hero">
   <video autoplay muted loop playsinline class="showreel">
     <source src="/static/videos/showreel.mp4" type="video/mp4">
   </video>
-
-</section>
+</div>
 
 <main>
-  <!-- CATEGORY SECTION -->
-  <section class="categories">
+  <div class="container">
+    <!-- CATEGORY SECTION -->
+    <section class="categories">
 
-    <figure class="cat-block">
-      <figcaption class="cat-title">
-        <a href="/cinematography">
-          <span>Cinematography</span>
-        </a>
-      </figcaption>
-      <div class="cat-img">
-        <img src="/static/images/cinematography-thumb.jpg" id="cinema-thumb">
-      </div>
-    </figure>
+      <figure class="cat-block cat-block-cinema">
+        <figcaption class="cat-title">
+          <a href="/cinematography">
+            <span>Cinema<span class="light">tography</span></span>
+          </a>
+        </figcaption>
+        <img class="cat-img" src="/static/images/rolegur-gaur-mynd1.jpg" id="cinema-thumb">
+        <a href="/cinematography" class="btn">Take a look at my work</a>
+      </figure>
 
-    <figure class="cat-block">
-      <figcaption class="cat-title">
-        <a href="/photography">
-          <span>Photography</span>
-        </a>
-      </figcaption>
-      <div class="cat-img">
-        <img src="/static/images/photography-thumb.jpg" id="photo-thumb">
-      </div>
-    </figure>
+      <figure class="cat-block cat-block-photo">
+        <figcaption class="cat-title">
+          <a href="/photography">
+            <span>Photo<span class="light">graphy</span></span>
+          </a>
+        </figcaption>
+        <img class="cat-img" src="/static/images/ljosmynd-7.jpg" id="photo-thumb">
+        <a href="/cinematography" class="btn">Take a look at my photos</a>
+      </figure>
 
-  </section>
+    </section>
 
-  <!-- HIRE SECTION -->
-  <section class="hire">
+    <!-- HIRE SECTION -->
+    <section class="hire">
+      <aside class="hire-image">
+        <img src="/static/images/portrait.jpg" alt="Portrait">
+      </aside>
+      <aside class="hire-text">
+        <h2>Hire <span class="light">me!</span></h2>
 
-    <aside class="hire-text">
-      <h2>HIRE ME!</h2>
+        <p>
+          Cinematographer & photographer based in Iceland.
+          Focused on cinematic storytelling and visual emotion.
+        </p>
 
-      <p>
-        Cinematographer & photographer based in Iceland.
-        Focused on cinematic storytelling and visual emotion.
-      </p>
-
-      <a href="/about" class="btn">More</a>
-    </aside>
-
-    <aside class="hire-image">
-      <img src="/static/images/portrait.jpg" alt="Portrait">
-    </aside>
-
-  </section>
+        <a href="/about" class="btn">More about me</a>
+      </aside>
+    </section>
+  </div>
 </main>
-
-<!-- SCRIPT -->
-<script type="module">
-  import initCategoryThumbnails from "{{ '/js/thumbnails.js' | htmlBaseUrl }}";
-
-  const cinemaThumbnail = document.getElementById("cinema-thumb");
-  const cinemaImages = [
-    "{{ '/static/images/rolegur-gaur-mynd1.jpg' | htmlBaseUrl }}",
-    "{{ '/static/images/djupt-inn-i-skog-mynd1.jpg' | htmlBaseUrl }}",
-    "{{ '/static/images/gesturinn-mynd1.jpg' | htmlBaseUrl }}",
-    "{{ '/static/images/egm-mynd1.jpg' | htmlBaseUrl }}",
-    "{{ '/static/images/coulrophobia-mynd1.jpg' | htmlBaseUrl }}",
-    "{{ '/static/images/raddir-sem-heyrast-ekki-mynd1.jpg' | htmlBaseUrl }}",
-    "{{ '/static/images/litefun-sofia-mynd1.jpg' | htmlBaseUrl }}",
-  ];
-
-  const photoThumbnail = document.getElementById("photo-thumb");
-  const photoImages = cinemaImages;
-  
-  initCategoryThumbnails(cinemaThumbnail, cinemaImages);
-  initCategoryThumbnails(photoThumbnail, photoImages);
-</script>
