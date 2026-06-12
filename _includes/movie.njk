@@ -6,7 +6,7 @@ description: Movie description
 <main class="project-page">
   <div class="container">
     <section class="project-overview">
-      <h1 class="project-title">{{ title }} <span class="project-subtitle">(Chill Dude)</span></h1>
+      <h1 class="project-title">{{ title }}{% if subtitle %} <span class="project-subtitle">({{ subtitle }})</span>{% endif %}</h1>
 
       <div class="video-embed">
         <iframe width="100%" src="https://www.youtube.com/embed/{{ youtube_id }}"></iframe>
