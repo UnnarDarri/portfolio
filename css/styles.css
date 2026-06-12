@@ -86,7 +86,7 @@ section {
   gap: 2rem;
   align-items: center;
   flex-wrap: nowrap;
-  overflow: visible;
+  margin-left: 3rem;
 }
 
 /* ACTIVE NAV UNDERLINE */
