@@ -681,8 +681,14 @@ body {
     clip-path: rect(0px 100% 100% 0px);
   }
 
+  .showreel {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
   .categories {
     flex-direction: column;
+    margin-top: 4rem;
     gap: 2rem;
   }
 
