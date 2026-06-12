@@ -35,7 +35,7 @@ section {
 
 /* HEADER */
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -44,10 +44,11 @@ section {
   justify-content: space-between;
   align-items: center;
 
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem 2.5rem 2rem;
 
-  background: rgba(20, 20, 20, 0.7);
-  backdrop-filter: blur(12px);
+  background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
+  mask-image: linear-gradient(rgb(20, 20, 20) 75%, rgba(20, 20, 20, 0));
+  backdrop-filter: blur(2px);
 
   color: #fff;
 
