@@ -215,7 +215,7 @@ section {
 }
 
 /* Make entire category card clickable */
-.cat-title a::after {
+.cat-block a::after {
   content: "";
   position: absolute;
   z-index: 10;
@@ -226,13 +226,13 @@ section {
 }
 
 /* Category card title line */
-.cat-title a > span {
+.cat-title > span {
   position: relative;
   display: block;
   overflow: hidden;
 }
 
-.cat-title a > span::after {
+.cat-title > span::after {
   content: "";
   position: absolute;
   margin-left: 1rem;
