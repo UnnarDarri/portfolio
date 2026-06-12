@@ -19,7 +19,7 @@ main {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 87.5rem;
   margin: 0 auto;
   padding: 0 2em 2em;
 }
@@ -180,7 +180,7 @@ a {
 /* PORTRAIT */
 .hire-image {
   flex: 1;
-  max-width: 350px;
+  max-width: 22rem;
 }
 
 .hire-image img {
@@ -409,7 +409,7 @@ a {
 }
 
 .photo-masonry {
-  columns: 4 280px;
+  columns: 4 17.5rem;
   column-gap: 1.5rem;
 
   margin: 0 auto;
@@ -419,7 +419,7 @@ a {
   width: 100%;
   display: block;
 
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
 
   border-radius: 10px;
 
@@ -445,7 +445,7 @@ a {
   justify-content: center;
 
   z-index: 999999;
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 .lightbox img {
@@ -457,7 +457,7 @@ a {
 
   object-fit: contain;
 
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
