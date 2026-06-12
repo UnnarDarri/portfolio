@@ -14,6 +14,17 @@ body {
   font-family: "Inter", Helvetica, Arial, sans-serif;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: clip;
+  clip-path: inset(0);
+  border: 0;
+}
+
 main {
   margin-bottom: 3rem;
 }
@@ -51,10 +62,6 @@ a {
 
   padding: 1.25rem 2.5rem 2rem;
 
-  background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
-  mask-image: linear-gradient(rgb(20, 20, 20) 75%, rgba(20, 20, 20, 0));
-  backdrop-filter: blur(2px);
-
   color: #fff;
 
   z-index: 99999;
@@ -62,6 +69,19 @@ a {
   font-size: 0.875rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.nav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
+  mask-image: linear-gradient(rgb(20, 20, 20) 75%, rgba(20, 20, 20, 0));
+  backdrop-filter: blur(2px);
 }
 
 .logo {
@@ -84,6 +104,10 @@ a {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
+}
+
+.mobile-menu-toggle {
+  display: none;
 }
 
 .menu {
@@ -213,13 +237,7 @@ a {
 .cat-block-photo {
   flex: 1;
 }
-
-.cat-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
+  
 /* Make entire category card clickable */
 .cat-block a::after {
   content: "";
@@ -231,20 +249,33 @@ a {
   bottom: 0;
 }
 
-/* Category card title line */
-.cat-title > span {
-  position: relative;
-  display: block;
+.cat-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  width: 100%;
   overflow: hidden;
 }
 
-.cat-title > span::after {
+.cat-title-inner {
+  display: block;
+  width: fit-content;
+}
+
+/* Category card title line */
+.cat-title-inner > span {
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+.cat-title-inner > span::after {
   content: "";
   position: absolute;
   margin-left: 1rem;
   top: 55%;
   
-  width: 100%;
+  width: 200vw;
   height: 1px;
   background: rgba(255, 255, 255, 0.75);
 }
@@ -346,6 +377,7 @@ a {
   justify-content: space-between;
   align-items: flex-start; /* IMPORTANT: title higher feel */
   margin-top: 2rem;
+  gap: 1rem;
 }
 
 /* TEXT SIDE */
@@ -385,7 +417,6 @@ a {
 }
 
 .project-info {
-  margin-top: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
@@ -558,4 +589,156 @@ body {
 
 .light {
   font-weight: 300;
+}
+
+@media screen and (max-width: 45rem) {
+  .mobile-menu-toggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  /* Hamburger menu icon courtesy of https://codepen.io/designcouch/pen/ExvwPY */
+  .mobile-menu-toggle .menu-icon {
+    width: 2.5rem;
+    aspect-ratio: 2 / 1;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle .menu-icon span {
+    display: block;
+    position: absolute;
+    height: 0.25rem;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  .mobile-menu-toggle .menu-icon span:nth-child(1) {
+    top: 0;
+  }
+
+  .mobile-menu-toggle .menu-icon span:nth-child(2),
+  .mobile-menu-toggle .menu-icon span:nth-child(3) {
+    top: 0.5rem;
+  }
+
+  .mobile-menu-toggle .menu-icon span:nth-child(4) {
+    top: 1rem;
+  }
+
+  .mobile-menu-visible .mobile-menu-toggle .menu-icon span:nth-child(1) {
+    top: 0.5rem;
+    width: 0%;
+    left: 50%;
+  }
+
+  .mobile-menu-visible .mobile-menu-toggle .menu-icon span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  .mobile-menu-visible .mobile-menu-toggle .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .mobile-menu-visible .mobile-menu-toggle .menu-icon span:nth-child(4) {
+    top: 0.5rem;
+    width: 0%;
+    left: 50%;
+  }
+
+  .menu {
+    position: absolute;
+    top: calc(100% - 1rem);
+    left: 0;
+    margin: 0;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #141414;
+    padding: 1rem;
+    width: 100%;
+    clip-path: rect(0px 100% 0px 0px);
+    transition: clip-path 0.6s ease;
+    gap: 0;
+  }
+
+  .menu a {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile-menu-visible .menu {
+    clip-path: rect(0px 100% 100% 0px);
+  }
+
+  .categories {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cat-block-photo {
+    text-align: right;
+  }
+
+  .cat-block-photo .cat-title-inner {
+    margin-left: auto;
+  }
+
+  .cat-block-photo .cat-title-inner > span::after {
+    content: none;
+  }
+
+  .cat-block-photo .cat-title-inner > span::before {
+    content: "";
+    position: absolute;
+    margin-left: 0;
+    margin-right: 1rem;
+    top: 55%;
+    right: 100%;
+    width: 200vw;
+    
+    display: inline-block;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .cat-block-photo .cat-img {
+    max-height: 30rem;
+    width: auto;
+    margin-left: auto;
+  }
+
+  .hire {
+    flex-direction: column;
+  }
+
+  .hire-image {
+    max-width: none;
+  }
+
+  .project {
+    margin-bottom: 4rem;
+  }
+
+  .project-lower {
+    flex-direction: column-reverse;
+  }
+
+  .about-lower {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hi {
+    text-align: center;
+  }
 }

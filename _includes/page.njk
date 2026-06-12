@@ -17,17 +17,27 @@ title: Page template
 <body>
 
   <!-- HEADER -->
-  <header class="nav">
+  <header class="nav" id="main-nav">
     <div class="logo">
       <a href="/">Unnar Darri</a>
       <small class="subtitle">Cinematographer</small>
     </div>
 
-    <nav class="menu">
+    <nav class="menu" id="menu">
       <a class="{{ 'active' if '/cinematography' in page.url }}" href="/cinematography">Cinematography</a>
       <a class="{{ 'active' if '/photography' in page.url }}" href="/photography">Photography</a>
       <a class="{{ 'active' if '/about' in page.url }}" href="/about">About me</a>
     </nav>
+
+    <button class="mobile-menu-toggle" id="mobile-menu-button" aria-controls="site-naviagtion" aria-expanded="false">
+      <span class="visually-hidden">Expand menu</span>
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
 
   </header>
 
@@ -46,5 +56,7 @@ title: Page template
     </nav>
 
   </footer>
+
+  <script src="/js/menu.js" type="module"></script>
 </body>
 </html>
