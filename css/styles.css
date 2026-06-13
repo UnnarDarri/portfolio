@@ -75,7 +75,7 @@ main {
 .container {
   max-width: 87.5rem;
   margin: 0 auto;
-  padding: 0 2rem 2rem;
+  padding: 0 2rem;
 }
 
 .container.full-width {
@@ -350,7 +350,7 @@ a {
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
-  gap: 2em;
+  gap: 2.5rem;
   align-items: center;
   padding: 3.75em;
   border-top: 1px solid rgb(255 255 255 / 10%);
@@ -641,6 +641,10 @@ a {
     line-height: 1.25;
   }
 
+  main {
+    margin-bottom: 0;
+  }
+
   /* Hide desktop showreel preview */
   .showreel .showreel-preview {
     display: none;
@@ -754,10 +758,15 @@ a {
 
   .footer {
     flex-direction: column;
+    border: none;
   }
 
   .footer .copyright {
     order: 2;
+    width: 100vw;
+    text-align: center;
+    border-top: 1px solid rgb(255 255 255 / 10%);
+    padding-top: 1.25rem;
   }
   
   .footer .footer-contact {
