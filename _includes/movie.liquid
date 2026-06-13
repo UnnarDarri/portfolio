@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: page.liquid
 title: Single movie
 description: Movie description
 ---
@@ -20,9 +20,9 @@ description: Movie description
       <div class="project-info">
         <h2>Info</h2>
         <div class="project-desc">
-          {%- for paragraph in description -%}
+          {% for paragraph in description %}
             <p>{{ paragraph | safe }}</p>
-          {%- endfor -%}
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -32,9 +32,9 @@ description: Movie description
         <h2>Visuals</h2>
       </div>
       <div class="project-gallery-images">
-        {%- for src in images -%}
+        {% for src in images %}
           <img src="{{ src }}">
-        {%- endfor -%}
+        {% endfor %}
       </div>
     </section>
   </div>
