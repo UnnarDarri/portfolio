@@ -189,6 +189,7 @@ a {
 }
 
 .showreel-button {
+  cursor: pointer;
   position: relative;
   background-color: #141414;
   color: inherit;
