@@ -425,6 +425,7 @@ a {
 }
 
 .project-info {
+  margin-top: 3.25rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
@@ -434,14 +435,12 @@ a {
   text-align: right;
   margin: 0;
   font-weight: 300;
+  line-height: 1;
 }
 
 .project-desc p {
-  margin-bottom: 0;
-}
-
-.project-desc p:not(:first-of-type) {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .project-desc p::after {
