@@ -8,10 +8,6 @@ playButton.addEventListener("click", () => {
     iframe.referrerPolicy = "strict-origin-when-cross-origin";
     iframe.allowFullscreen = true;
 
-    const youtubePlayer = document.createElement("div");
-    youtubePlayer.className = "showreel-embed";
-    youtubePlayer.appendChild(iframe);
-
-    player.replaceWith(youtubePlayer);
+    player.replaceWith(iframe);
     playButton.remove();
 });
