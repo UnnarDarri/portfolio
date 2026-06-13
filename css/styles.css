@@ -429,6 +429,25 @@ a {
   font-weight: 300;
 }
 
+.project-desc p {
+  margin-bottom: 0;
+}
+
+.project-desc p:not(:first-of-type) {
+  margin-top: 0;
+}
+
+.project-desc p::after {
+  content: "–";
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0.25rem 0;
+}
+
+.project-desc p:last-of-type::after {
+  content: none;
+}
+
 .project-gallery-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
