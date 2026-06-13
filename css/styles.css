@@ -152,9 +152,11 @@ a {
   text-align: center;
 }
 
-.showreel-link {
+.showreel-button {
   position: relative;
   background-color: #141414;
+  color: inherit;
+  border: none;
   border-radius: 0.5rem;
   display: inline-flex;
   width: fit-content;
@@ -165,18 +167,17 @@ a {
   font-weight: 700;
 }
 
-.showreel-link a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+.showreel {
+  aspect-ratio: 2.25 / 1;
 }
 
-.hero video {
-  width: 100%;
+.showreel video,
+.showreel iframe {
   display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
 }
 
 /* HIRE SECTION */
@@ -644,7 +645,7 @@ body {
     line-height: 1.25;
   }
 
-  .showreel-link {
+  .showreel-button {
     font-size: 1.125rem;
   }
 
@@ -800,7 +801,7 @@ body {
   }
 
   .showreel {
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
   }
 

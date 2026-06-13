@@ -4,14 +4,16 @@ title: Home
 ---
 <!-- HERO SHOWREEL -->
 <div class="hero">
-  <video autoplay muted loop playsinline class="showreel">
-    <source src="/static/videos/SHOWREEL-SIMPLE.mov" type="video/mp4">
-  </video>
+  <div class="showreel">
+    <video autoplay muted loop playsinline id="showreel-preview">
+      <source src="/static/videos/SHOWREEL-SIMPLE.mov" type="video/mp4">
+    </video>
+  </div>
   <div class="overlay">
-    <div class="showreel-link">
+    <button class="showreel-button" id="showreel-play-button">
       <img src="/static/images/play.svg" alt="">
-      <a href="https://youtu.be/WCzgM3aWdXU">Watch <span class="light">showreel</span></a>
-    </div>
+      <span>Watch <span class="light">showreel</span></span>
+    </button>
   </div>
 </div>
 
@@ -60,3 +62,5 @@ title: Home
     </section>
   </div>
 </main>
+
+<script src="/js/home.js" type="module"></script>
