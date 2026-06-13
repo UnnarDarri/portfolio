@@ -804,6 +804,7 @@ body {
     justify-content: space-between;
     gap: 1.25rem;
     width: 100%;
+    line-height: 1.5rem;
   }
 
   .contact-email {
