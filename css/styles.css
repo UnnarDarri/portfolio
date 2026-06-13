@@ -32,7 +32,7 @@ main {
 .container {
   max-width: 87.5rem;
   margin: 0 auto;
-  padding: 0 2em 2em;
+  padding: 0 2rem 2rem;
 }
 
 .container.full-width {
@@ -83,6 +83,12 @@ a {
   background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
   mask-image: linear-gradient(rgb(20, 20, 20) 75%, rgba(20, 20, 20, 0));
   backdrop-filter: blur(2px);
+}
+
+.footer-contact,
+.footer-contact small,
+.footer-contact h2 {
+  line-height: 1;
 }
 
 .logo {
@@ -253,7 +259,7 @@ a {
 .cat-title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
   width: 100%;
   overflow: hidden;
 }
@@ -578,28 +584,39 @@ a {
 
 h1 {
   font-size: 6rem;
+  line-height: 1.125;
   font-weight: 700;
   margin: 0;
 }
 
 h2 {
   font-size: 4rem;
+  line-height: 1.125;
   font-weight: 700;
 }
 
 h3 {
   font-size: 3rem;
+  line-height: 4.75rem;
   font-weight: 300;
 }
 
 h4 {
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.5;
   font-weight: 300;
+}
+
+h6 {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 body {
@@ -612,16 +629,40 @@ body {
 }
 
 @media screen and (max-width: 45rem) {
+  body {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .showreel-link {
+    font-size: 1.125rem;
+  }
+
+  .cat-title {
+    font-size: 1.5rem;
+  }
+
   .mobile-menu-toggle {
     display: block;
     background-color: transparent;
     border: none;
     padding: 0;
+    margin-left: 1rem;
   }
   
   /* Hamburger menu icon courtesy of https://codepen.io/designcouch/pen/ExvwPY */
   .mobile-menu-toggle .menu-icon {
-    width: 2.5rem;
+    width: 1.125rem;
     aspect-ratio: 2 / 1;
     position: relative;
     transform: rotate(0deg);
@@ -632,10 +673,9 @@ body {
   .mobile-menu-toggle .menu-icon span {
     display: block;
     position: absolute;
-    height: 0.25rem;
+    height: 1px;
     width: 100%;
     background: #fff;
-    border-radius: 9px;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -648,15 +688,15 @@ body {
 
   .mobile-menu-toggle .menu-icon span:nth-child(2),
   .mobile-menu-toggle .menu-icon span:nth-child(3) {
-    top: 0.5rem;
+    top: 5px;
   }
 
   .mobile-menu-toggle .menu-icon span:nth-child(4) {
-    top: 1rem;
+    top: 10px;
   }
 
   .mobile-menu-visible .mobile-menu-toggle .menu-icon span:nth-child(1) {
-    top: 0.5rem;
+    top: 5px;
     width: 0%;
     left: 50%;
   }
@@ -670,7 +710,7 @@ body {
   }
 
   .mobile-menu-visible .mobile-menu-toggle .menu-icon span:nth-child(4) {
-    top: 0.5rem;
+    top: 5px;
     width: 0%;
     left: 50%;
   }
@@ -699,6 +739,64 @@ body {
 
   .mobile-menu-visible .menu {
     clip-path: rect(0px 100% 100% 0px);
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer .copyright {
+    order: 2;
+  }
+  
+  .footer .footer-contact {
+    display: grid;
+    grid-template-areas: "email     email"
+                         "phone     phone"
+                         "instagram youtube";
+    text-align: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  .contact-email {
+    grid-area: email;
+    width: 100%;
+  }
+
+  .contact-phone {
+    grid-area: phone;
+    width: 100%;
+  }
+
+  .contact-instagram {
+    grid-area: instagram;
+  }
+
+  .contact-youtube {
+    grid-area: youtube;
+  }
+
+  .contact-email,
+  .contact-phone {
+    width: 100%;
+  }
+
+  .btn,
+  .mobile-btn {
+    display: inline-block;
+    padding: 0.75em;
+    border: 1px solid #fff;
+    color: inherit;
+    background-color: inherit;
+    text-decoration: none;
+    font-size: 0.777rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .footer .footer-contact h2 {
+    display: none;
   }
 
   .showreel {
@@ -739,8 +837,7 @@ body {
   }
 
   .cat-block-photo .cat-img {
-    max-height: 30rem;
-    width: auto;
+    max-width: 60vw;
     margin-left: auto;
   }
 
