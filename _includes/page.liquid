@@ -24,9 +24,9 @@ title: Page template
     </div>
 
     <nav class="menu" id="menu">
-      <a class="{{ 'active' if '/cinematography' in page.url }}" href="/cinematography"><span>Cinematography</span></a>
-      <a class="{{ 'active' if '/photography' in page.url }}" href="/photography"><span>Photography</span></a>
-      <a class="{{ 'active' if '/about' in page.url }}" href="/about"><span>About me</span></a>
+      <a class="{% if page.url contains '/cinematography' %}active{% endif %}" href="/cinematography"><span>Cinematography</span></a>
+      <a class="{% if page.url contains '/photography' %}active{% endif %}" href="/photography"><span>Photography</span></a>
+      <a class="{% if page.url contains '/about' %}active{% endif %}" href="/about"><span>About me</span></a>
     </nav>
 
     <button class="mobile-menu-toggle" id="mobile-menu-button" aria-controls="site-naviagtion" aria-expanded="false">
@@ -41,7 +41,7 @@ title: Page template
 
   </header>
 
-  {{ content | safe }}
+  {{ content }}
 
   <!-- FOOTER -->
   <footer class="footer">
