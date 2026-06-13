@@ -673,18 +673,19 @@ a {
     display: block;
     background-color: transparent;
     border: none;
-    padding: 0;
+    padding: 1rem;
+    margin: -1rem;
     margin-left: 1rem;
+    cursor: pointer;
   }
   
   /* Hamburger menu icon courtesy of https://codepen.io/designcouch/pen/ExvwPY */
   .mobile-menu-toggle .menu-icon {
     width: 1.125rem;
-    aspect-ratio: 2 / 1;
+    aspect-ratio: 8 / 5;
     position: relative;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
-    cursor: pointer;
   }
 
   .mobile-menu-toggle .menu-icon span {
