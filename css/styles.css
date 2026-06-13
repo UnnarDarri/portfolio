@@ -50,6 +50,14 @@ a {
   margin-bottom: 3rem;
 }
 
+.page-description {
+  margin-bottom: 4rem;
+}
+
+.page-description-text {
+  max-width: 42.5rem;
+}
+
 /* HEADER */
 .nav {
   position: fixed;
@@ -683,6 +691,10 @@ body {
 
   .cat-title {
     font-size: 1.5rem;
+  }
+
+  .page-description {
+    margin-bottom: 2rem;
   }
 
   .mobile-menu-toggle {
