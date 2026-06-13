@@ -171,6 +171,11 @@ a {
   aspect-ratio: 2.25 / 1;
 }
 
+/* Hide mobile video on desktop */
+.showreel .showreel-preview-mobile {
+  display: none;
+}
+
 .showreel video,
 .showreel iframe {
   display: block;
@@ -642,6 +647,16 @@ body {
   h2 {
     font-size: 2rem;
     line-height: 1.25;
+  }
+
+  /* Hide desktop showreel preview */
+  .showreel .showreel-preview {
+    display: none;
+  }
+
+  /* Show mobile showreel preview */
+  .showreel .showreel-preview-mobile {
+    display: block;
   }
 
   .showreel-button {

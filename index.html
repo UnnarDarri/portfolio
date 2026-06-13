@@ -4,9 +4,12 @@ title: Home
 ---
 <!-- HERO SHOWREEL -->
 <div class="hero">
-  <div class="showreel">
-    <video autoplay muted loop playsinline id="showreel-preview">
+  <div class="showreel" id="showreel-container">
+    <video class="showreel-preview" autoplay muted loop playsinline>
       <source src="/static/videos/SHOWREEL-SIMPLE.mov" type="video/mp4">
+    </video>
+    <video class="showreel-preview-mobile" autoplay muted loop playsinline>
+      <source src="/static/videos/SHOWREEL-SIMPLE_VERTICAL.mov" type="video/mp4">
     </video>
   </div>
   <div class="overlay">

@@ -1,5 +1,5 @@
 const playButton = document.getElementById("showreel-play-button");
-const player = document.getElementById("showreel-preview");
+const playerContainer = document.getElementById("showreel-container");
 
 playButton.addEventListener("click", () => {
     const iframe = document.createElement("iframe");
@@ -8,6 +8,6 @@ playButton.addEventListener("click", () => {
     iframe.referrerPolicy = "strict-origin-when-cross-origin";
     iframe.allowFullscreen = true;
 
-    player.replaceWith(iframe);
+    playerContainer.replaceChildren(iframe);
     playButton.remove();
 });
