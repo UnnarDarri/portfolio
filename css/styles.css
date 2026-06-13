@@ -140,14 +140,15 @@ a {
 }
 
 /* ACTIVE NAV UNDERLINE */
-.menu .active {
+.menu .active span {
   position: relative;
 }
 
-.menu .active::after {
+.menu .active span::after {
   content: "";
   display: block;
   position: absolute;
+  left: 0;
   width: 100%;
   border-bottom: 1px solid #fff;
 }
