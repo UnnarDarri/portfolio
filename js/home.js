@@ -3,7 +3,7 @@ const player = document.getElementById("showreel-preview");
 
 playButton.addEventListener("click", () => {
     const iframe = document.createElement("iframe");
-    iframe.src = "https://www.youtube.com/embed/WCzgM3aWdXU";
+    iframe.src = "https://www.youtube.com/embed/WCzgM3aWdXU?autoplay=1";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     iframe.referrerPolicy = "strict-origin-when-cross-origin";
     iframe.allowFullscreen = true;
