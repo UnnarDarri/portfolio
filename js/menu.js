@@ -1,5 +1,5 @@
 const menuToggle = document.getElementById("mobile-menu-button");
-const menuText = menuToggle.querySelector(".span");
+const menuText = menuToggle.querySelector("span");
 const nav = document.getElementById("main-nav");
 
 menuToggle.addEventListener("click", () => {
