@@ -229,19 +229,6 @@ a {
   z-index: 999999;
 }
 
-/* HIRE SECTION */
-.hire {
-  background-color: #100f0f;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hire-text {
-  flex: 1;
-  padding: 3.75rem;
-}
-
 .btn {
   display: inline-block;
   padding: 0.75em;
@@ -256,6 +243,29 @@ a {
 .btn:hover {
   background: #fff;
   color: #141414;
+}
+
+/* HIRE SECTION */
+.hire {
+  background-color: #100f0f;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hire-text {
+  flex: 1;
+  padding: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hire-text p {
+  margin-bottom: 6.5rem;
+}
+
+.hire-text .btn {
+  margin-top: auto;
 }
 
 /* PORTRAIT */
@@ -896,6 +906,6 @@ a {
   }
 
   .about-hi {
-    text-align: center;
+    text-align: left;
   }
 }
