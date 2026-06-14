@@ -1,5 +1,5 @@
 function initLightbox() {
-  const images = document.querySelectorAll(".photo-masonry img");
+  const images = document.querySelectorAll(".lightbox-viewable");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
 

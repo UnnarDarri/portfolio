@@ -3,6 +3,11 @@ layout: page.liquid
 title: Single movie
 description: Movie description
 ---
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="">
+</div>
+
 <main class="project-page">
   <div class="container">
     <section class="project-overview">
@@ -33,13 +38,15 @@ description: Movie description
           {% if src contains '.webp' %}
             <picture>
               <source src="{{ src }}" type="image/webp">
-              <img src="{{ src | replace_first: '/static/images/', '/static/images/jpg/' | replace_last: '.webp', '.jpg' }}">
+              <img class="lightbox-viewable" src="{{ src | replace_first: '/static/images/', '/static/images/jpg/' | replace_last: '.webp', '.jpg' }}">
             </picture>
           {% else %}
-            <img src="{{ src }}">
+            <img class="lightbox-viewable" src="{{ src }}">
           {% endif %}
         {% endfor %}
       </div>
     </section>
   </div>
 </main>
+
+<script src="/js/lightbox.js" type="module"></script>

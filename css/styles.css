@@ -578,14 +578,17 @@ a {
   display: block;
   margin-bottom: 1.5rem;
   border-radius: 10px;
-  cursor: pointer;
   transition: transform 0.35s ease,
-              filter 0.35s ease;
+  filter 0.35s ease;
 }
 
 .photo-masonry img:hover {
   transform: scale(1.03);
   filter: contrast(1);
+}
+
+.lightbox-viewable {
+  cursor: pointer;
 }
 
 .video-embed {
