@@ -223,6 +223,12 @@ a {
   object-fit: cover;
 }
 
+/* Display video embed above header to uncover player controls */
+.showreel iframe {
+  position: relative;
+  z-index: 999999;
+}
+
 /* HIRE SECTION */
 .hire {
   background-color: #100f0f;
