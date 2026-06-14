@@ -12,7 +12,7 @@ function initLightbox() {
 
     img.addEventListener("click", () => {
       lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
+      lightboxImg.src = img.currentSrc;
     });
 
   });
