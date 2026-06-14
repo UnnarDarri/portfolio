@@ -33,7 +33,14 @@ description: Movie description
       </div>
       <div class="project-gallery-images">
         {% for src in images %}
-          <img src="{{ src }}">
+          {% if src contains '.webp' %}
+            <picture>
+              <source srcset="{{ src }}" type="image/webp">
+              <img src="{{ src | replace: '/static/images/', '/static/images/jpg/' | replace: '.webp', '.jpg' }}">
+            </picture>
+          {% else %}
+            <img src="{{ src }}">
+          {% endif %}
         {% endfor %}
       </div>
     </section>
