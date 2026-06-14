@@ -35,14 +35,7 @@ description: Movie description
       </div>
       <div class="project-gallery-images">
         {% for src in images %}
-          {% if src contains '.webp' %}
-            <picture>
-              <source src="{{ src }}" type="image/webp">
-              <img class="lightbox-viewable" src="{{ src | replace_first: '/static/images/', '/static/images/jpg/' | replace_last: '.webp', '.jpg' }}">
-            </picture>
-          {% else %}
-            <img class="lightbox-viewable" src="{{ src }}">
-          {% endif %}
+          <img class="lightbox-viewable" src="{{ src }}">
         {% endfor %}
       </div>
     </section>

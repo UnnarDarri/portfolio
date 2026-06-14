@@ -6,6 +6,10 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  height: auto;
+}
+
 .h1 {
   font-size: 6rem;
   line-height: 1.125;
