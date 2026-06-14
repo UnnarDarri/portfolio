@@ -562,6 +562,7 @@ a {
 }
 
 .lightbox img {
+  contain-intrinsic-size: auto 100vw auto 100vh;
   max-width: 85vw;
   max-height: 85vh;
   width: auto;
