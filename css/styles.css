@@ -456,8 +456,6 @@ a {
 
 .project-lower {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* IMPORTANT: title higher feel */
   margin-top: 2rem;
   gap: 1rem;
 }
@@ -465,11 +463,19 @@ a {
 /* TEXT SIDE */
 .project-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .project-text p {
   margin-top: 0;
   margin-right: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-text .btn {
+  margin-top: auto;
 }
 
 .project-heading h3 {
@@ -838,6 +844,8 @@ a {
     text-decoration: none;
     font-size: 0.777rem;
     transition: background-color 0.3s ease, color 0.3s ease;
+    min-width: 6.25rem;
+    text-align: center;
   }
 
   .footer .footer-contact h2 {
