@@ -9,12 +9,9 @@ description: Movie description
       <h1 class="project-title">{{ title }}{% if subtitle %} <span class="project-subtitle">({{ subtitle }})</span>{% endif %}</h1>
 
       <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/{{ youtube_id }}?rel=0"
+        <iframe src="https://www.youtube.com/embed/{{ youtube_id }}?rel=0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <div class="project-info">
