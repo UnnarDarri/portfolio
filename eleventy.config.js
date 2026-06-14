@@ -11,10 +11,15 @@ export default function (eleventyConfig) {
     formats: ["avif", "webp", "jpeg", "svg"],
     svgShortCircuit: true,
     transformOnRequest: false,
+    
+    // Maximum image widths
+    widths: [4096, 2048],
 
     htmlOptions: {
       imgAttributes: {
         alt: "",
+        loading: "lazy",
+				decoding: "async",
       }
     },
 
