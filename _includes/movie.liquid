@@ -32,7 +32,7 @@ description: Movie description
         {% for src in images %}
           {% if src contains '.webp' %}
             <picture>
-              <source srcset="{{ src }}" type="image/webp">
+              <source src="{{ src }}" type="image/webp">
               <img src="{{ src | replace: '/static/images/', '/static/images/jpg/' | replace: '.webp', '.jpg' }}">
             </picture>
           {% else %}
