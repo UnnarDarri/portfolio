@@ -16,7 +16,19 @@ export default function (eleventyConfig) {
       imgAttributes: {
         alt: "",
       }
-    }
+    },
+
+    sharpJpegOptions: {
+      quality: 80,
+    },
+
+    sharpWebpOptions: {
+      quality: 90,
+    },
+
+    sharpAvifOptions: {
+      quality: 70,
+    },
   });
   
   eleventyConfig.on("eleventy.after", () => {
