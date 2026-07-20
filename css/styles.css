@@ -79,7 +79,7 @@ main {
 .container {
   max-width: 87.5rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 max(env(safe-area-inset-right), 2rem) 0 max(env(safe-area-inset-left), 2rem);
 }
 
 .container.full-width {
@@ -114,7 +114,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem 2rem;
+  padding: max(env(safe-area-inset-top), 1.25rem) max(env(safe-area-inset-right), 2rem) 2rem max(env(safe-area-inset-left), 2rem);
   color: #fff;
   z-index: 99999;
   font-size: 0.875rem;
@@ -152,6 +152,7 @@ a {
   letter-spacing: 0.2rem;
   text-decoration: none;
   position: relative;
+  z-index: 10;  /* Keep logo above expanded menu background on mobile */
 }
 
 .logo .subtitle {
@@ -374,7 +375,7 @@ a {
   justify-content: space-between;
   gap: 2.5rem;
   align-items: center;
-  padding: 3.75em;
+  padding: 3.25rem max(env(safe-area-inset-right), 3.25rem) 3.25rem max(env(safe-area-inset-left), 3.25rem);
   border-top: 1px solid rgb(255 255 255 / 10%);
   font-size: 0.875rem;
   font-weight: 500;
@@ -557,10 +558,11 @@ a {
   align-items: center;
   justify-content: center;
   z-index: 999999;
-  padding: 2.5rem;
+  padding: max(env(safe-area-inset-top), 2rem) max(env(safe-area-inset-right), 2rem) max(env(safe-area-inset-bottom), 2rem) max(env(safe-area-inset-left), 2rem);
 }
 
 .lightbox img {
+  contain-intrinsic-size: auto 100vw auto 100vh;
   max-width: 85vw;
   max-height: 85vh;
   width: auto;
@@ -769,11 +771,12 @@ a {
     top: calc(100% - 1rem);
     left: 0;
     margin: 0;
+    margin-top: -6rem;  /* Menu background should expand from top of the page, underneath the header */
     text-align: center;
     justify-content: center;
     flex-direction: column;
     background-color: #141414;
-    padding: 1rem;
+    padding: 8rem 1rem 3rem;
     width: 100%;
     clip-path: rect(0 100% 0 0);
     transition: clip-path 0.6s ease;
@@ -793,6 +796,7 @@ a {
   .footer {
     flex-direction: column;
     border: none;
+    padding-bottom: max(env(safe-area-inset-bottom), 1.25rem);
   }
 
   .footer .copyright {
